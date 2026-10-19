@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Dispense di Fisica I – cinematica, dinamica, energia, corpo rigido, termodinamica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dispense di Fisica I gratuite e consultabili online: incertezze, vettori, cinematica, dinamica, lavoro ed energia, moti relativi, sistemi di punti, corpo rigido e termodinamica. 116 sezioni con 786 equazioni e 120 figure.">
+<meta name="author" content="Satnam Singh">
+<link rel="canonical" href="https://namsat.github.io/fisica1/">
+<meta property="og:title" content="Dispense di Fisica I">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://namsat.github.io/fisica1/">
+<meta property="og:site_name" content="Dispense di Fisica I">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://namsat.github.io/fisica1/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Dispense di Fisica I", "url": "https://namsat.github.io/fisica1/", "inLanguage": "it", "author": {"@type": "Person", "name": "Satnam Singh"}}</script>
+<meta property="og:description" content="Dalla cinematica alla termodinamica: 116 sezioni, 786 equazioni, 120 figure.">
+<script>try{var t=localStorage.getItem('f1-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="home" data-root="" data-page="index.html">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="top">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">F<sub>I</sub></span><span class="brand-t">Dispense di Fisica I</span></a>
+  <div class="top-r">
+    <button class="search-btn" id="search-btn" aria-label="Cerca nelle dispense"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><span class="sb-t">Cerca</span><kbd>/</kbd></button>
+    <a class="en-btn" id="en-btn" href="#" hidden translate="no" title="Read these notes in English (Google Translate)" lang="en"><span>EN</span></a>
+    <button class="icon-btn" id="theme-btn" aria-label="Cambia tema"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4"/><path d="M10 1.5v2M10 16.5v2M1.5 10h2M16.5 10h2M4 4l1.4 1.4M14.6 14.6 16 16M4 16l1.4-1.4M14.6 5.4 16 4"/></svg></button>
+    <a class="port" href="/">← Portfolio</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-txt">
+      <p class="eyebrow">Ingegneria Fisica · appunti di corso</p>
+      <h1>Dispense di <em>Fisica&nbsp;I</em></h1>
+      <p class="lede">Dalle incertezze di misura alla termodinamica, con dimostrazioni passo per passo, figure e riquadri di riepilogo. Scritte da Satnam Singh, studente di Ingegneria Fisica.</p>
+      <dl class="stats">
+        <div><dt>capitoli</dt><dd>14</dd></div>
+        <div><dt>sezioni</dt><dd>116</dd></div>
+        <div><dt>equazioni</dt><dd>786</dd></div>
+        <div><dt>figure</dt><dd>120</dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn btn-p" href="premesse/index.html" id="start-btn">Inizia a leggere</a>
+        <a class="btn" href="#" id="resume-btn" hidden>Riprendi</a>
+      </div>
+    </div>
+
+    <figure class="lab" aria-label="Simulatore di moto parabolico">
+      <div class="lab-head">
+        <span class="lab-tag">5.7 · Moto parabolico</span>
+        <span class="lab-hint">Trascina la freccia per lanciare</span>
+      </div>
+      <canvas id="lab" width="640" height="380"></canvas>
+      <div class="lab-ro" aria-live="polite">
+        <div><span class="k">v<sub>0</sub></span><span class="v" id="ro-v">—</span></div>
+        <div><span class="k">θ</span><span class="v" id="ro-a">—</span></div>
+        <div><span class="k">gittata</span><span class="v" id="ro-r">—</span></div>
+        <div><span class="k">h<sub>max</sub></span><span class="v" id="ro-h">—</span></div>
+        <div><span class="k">t<sub>volo</sub></span><span class="v" id="ro-t">—</span></div>
+      </div>
+      <figcaption>
+        <span class="math inline notranslate" translate="no"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3715em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">g</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.4519em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2481em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.0278em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> — la gittata è massima a 45°. <a href="cinematica/moto-parabolico.html">Leggi la derivazione →</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="chapters" aria-labelledby="ch-h">
+    <div class="sec-head">
+      <h2 id="ch-h">Indice</h2>
+      <p class="prog home-prog"><span id="prog-n">0</span> / <span id="prog-t">0</span> pagine lette<span class="prog-bar"><i id="prog-bar"></i></span></p>
+    </div>
+    <ol class="cards">
+<li class="card" data-ch="premesse"><a href="premesse/index.html" data-p="premesse/index.html"><span class="card-n">01</span><span class="card-t">Premesse</span><span class="card-m">1 sezioni · 1 min</span><ul class="card-s"><li>Argomenti trattati</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="osservazioni-preliminari"><a href="osservazioni-preliminari/index.html" data-p="osservazioni-preliminari/index.html"><span class="card-n">02</span><span class="card-t">Osservazioni preliminari</span><span class="card-m">3 sezioni · 6 min</span><ul class="card-s"><li>Misure e gestione delle incertezze</li><li>Alcune definizioni</li><li>Grandezze legate a interazioni</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="derivate-e-integrali"><a href="derivate-e-integrali/index.html" data-p="derivate-e-integrali/index.html"><span class="card-n">03</span><span class="card-t">Derivate e Integrali</span><span class="card-m">2 sezioni · 1 min</span><ul class="card-s"><li>Derivate</li><li>Integrali</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="vettori-e-sistemi-di-riferimento"><a href="vettori-e-sistemi-di-riferimento/index.html" data-p="vettori-e-sistemi-di-riferimento/index.html"><span class="card-n">04</span><span class="card-t">Vettori e sistemi di riferimento</span><span class="card-m">5 sezioni · 6 min</span><ul class="card-s"><li>I vettori</li><li>Coordinate cartesiane</li><li>Coordinate polari</li><li>Coordinate intrinseche</li><li class="more">+ altre 1</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="cinematica"><a href="cinematica/index.html" data-p="cinematica/index.html"><span class="card-n">05</span><span class="card-t">Cinematica</span><span class="card-m">12 sezioni · 21 min</span><ul class="card-s"><li>Le prime definizioni</li><li>Equazioni del moto</li><li>Equazioni del moto in coordinate cartesiane</li><li>Equazioni del moto in coordinate polari</li><li class="more">+ altre 8</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="dinamica"><a href="dinamica/index.html" data-p="dinamica/index.html"><span class="card-n">06</span><span class="card-t">Dinamica</span><span class="card-m">7 sezioni · 10 min</span><ul class="card-s"><li>I Principi di Newton</li><li>Le Forze</li><li>Quantità di Moto</li><li>Impulso</li><li class="more">+ altre 3</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="lavoro-e-energie"><a href="lavoro-e-energie/index.html" data-p="lavoro-e-energie/index.html"><span class="card-n">07</span><span class="card-t">Lavoro e Energie</span><span class="card-m">13 sezioni · 13 min</span><ul class="card-s"><li>Lavoro</li><li>Energia Cinetica</li><li>Teorema dell'Energia-Lavoro</li><li>Potenza</li><li class="more">+ altre 9</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="moti-relativi"><a href="moti-relativi/index.html" data-p="moti-relativi/index.html"><span class="card-n">08</span><span class="card-t">Moti relativi</span><span class="card-m">8 sezioni · 10 min</span><ul class="card-s"><li>Definizioni preliminari</li><li>Notazione e Convenzioni</li><li>Trasformazioni di Coordinate</li><li>Approfondimento: la derivata di un versore rotante</li><li class="more">+ altre 4</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="momenti"><a href="momenti/index.html" data-p="momenti/index.html"><span class="card-n">09</span><span class="card-t">Momenti</span><span class="card-m">7 sezioni · 8 min</span><ul class="card-s"><li>Momento angolare</li><li>Momento delle forze</li><li>Teorema del momento angolare per polo fisso</li><li>Teorema del momento angolare per polo mobile</li><li class="more">+ altre 3</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="dinamica-del-sistema-di-punti"><a href="dinamica-del-sistema-di-punti/index.html" data-p="dinamica-del-sistema-di-punti/index.html"><span class="card-n">10</span><span class="card-t">Dinamica del sistema di punti</span><span class="card-m">11 sezioni · 15 min</span><ul class="card-s"><li>Definizioni preliminari</li><li>Proprietà dei sistemi di punti</li><li>Sistema del laboratorio</li><li>I Teorema di König</li><li class="more">+ altre 7</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="urti"><a href="urti/index.html" data-p="urti/index.html"><span class="card-n">11</span><span class="card-t">Urti</span><span class="card-m">3 sezioni · 2 min</span><ul class="card-s"><li>Urto elastico</li><li>Urto anelastico</li><li>Urto vincolato</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="corpo-rigido"><a href="corpo-rigido/index.html" data-p="corpo-rigido/index.html"><span class="card-n">12</span><span class="card-t">Corpo rigido</span><span class="card-m">14 sezioni · 16 min</span><ul class="card-s"><li>Massa di un corpo rigido</li><li>Proprietà di un corpo rigido</li><li>Inerzia</li><li>Sistema del laboratorio per un corpo rigido</li><li class="more">+ altre 10</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="termodinamica"><a href="termodinamica/index.html" data-p="termodinamica/index.html"><span class="card-n">13</span><span class="card-t">Termodinamica</span><span class="card-m">24 sezioni · 24 min</span><ul class="card-s"><li>Introduzione</li><li>Sistema termodinamico</li><li>Pareti</li><li>Ambiente</li><li class="more">+ altre 20</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+<li class="card" data-ch="flusso"><a href="flusso/index.html" data-p="flusso/index.html"><span class="card-n">14</span><span class="card-t">Flusso<span class="wip">in lavorazione</span></span><span class="card-m">6 sezioni · 5 min</span><ul class="card-s"><li>Definizione Matematica</li><li>Interpretazione Fisica</li><li>Il Teorema di Gauss e l'Angolo Solido</li><li>Il Flusso in Fluidodinamica</li><li class="more">+ altre 2</li></ul><span class="card-p" aria-hidden="true"><i></i></span></a></li>
+    </ol>
+  </section>
+
+  <section class="howto">
+    <h2>Come usarle</h2>
+    <ul>
+      <li><strong>Indice sempre a portata:</strong> la barra laterale mostra tutti i capitoli; su telefono si apre dal pulsante in alto a sinistra.</li>
+      <li><strong>Segna cosa hai letto:</strong> alla fine di ogni sezione c'è un pulsante; i progressi restano salvati in questo browser.</li>
+      <li><strong>Cerca:</strong> premi <kbd>/</kbd> e scrivi un argomento o una formula ("Steiner", "Carnot", "gittata").</li>
+      <li><strong>Da tastiera:</strong> <kbd>←</kbd> e <kbd>→</kbd> passano alla sezione precedente o successiva.</li>
+      <li><strong>Equazioni numerate</strong> come nella versione originale (1–786): ogni equazione ha un link diretto.</li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p>© 2024–2026 Satnam Singh · Ultima revisione dei contenuti: settembre 2024. Dispense scritte da uno studente: non sostituiscono il libro di testo né le lezioni.</p>
+    <p>Hai trovato un errore? Scrivi a <span class="sel">satnamsinghprojects@gmail.com</span></p>
+  </footer>
+</main>
+
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Cerca nelle dispense">
+    <div class="search-in"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><input id="search-q" type="search" placeholder="Cerca: gittata, momento d'inerzia, Carnot…" autocomplete="off"><button class="esc" id="search-x">Esc</button></div>
+    <ol class="search-r" id="search-r"></ol>
+  </div>
+</div>
+<nav hidden aria-hidden="true"><ol class="tree">
+<li class="ch" data-ch="premesse"><div class="ch-row"><button class="tw" aria-label="Espandi Premesse" aria-expanded="false"></button><a href="premesse/index.html" data-p="premesse/index.html"><span class="n" translate="no">1</span><span class="t">Premesse</span></a></div>
+<ol>
+<li><a href="premesse/argomenti-trattati.html" data-p="premesse/argomenti-trattati.html"><span class="n" translate="no">1.1</span><span class="t">Argomenti trattati</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="osservazioni-preliminari"><div class="ch-row"><button class="tw" aria-label="Espandi Osservazioni preliminari" aria-expanded="false"></button><a href="osservazioni-preliminari/index.html" data-p="osservazioni-preliminari/index.html"><span class="n" translate="no">2</span><span class="t">Osservazioni preliminari</span></a></div>
+<ol>
+<li><a href="osservazioni-preliminari/misure-e-gestione-delle-incertezze.html" data-p="osservazioni-preliminari/misure-e-gestione-delle-incertezze.html"><span class="n" translate="no">2.1</span><span class="t">Misure e gestione delle incertezze</span></a></li>
+<li><a href="osservazioni-preliminari/alcune-definizioni.html" data-p="osservazioni-preliminari/alcune-definizioni.html"><span class="n" translate="no">2.2</span><span class="t">Alcune definizioni</span></a></li>
+<li><a href="osservazioni-preliminari/grandezze-legate-a-interazioni.html" data-p="osservazioni-preliminari/grandezze-legate-a-interazioni.html"><span class="n" translate="no">2.3</span><span class="t">Grandezze legate a interazioni</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="derivate-e-integrali"><div class="ch-row"><button class="tw" aria-label="Espandi Derivate e Integrali" aria-expanded="false"></button><a href="derivate-e-integrali/index.html" data-p="derivate-e-integrali/index.html"><span class="n" translate="no">3</span><span class="t">Derivate e Integrali</span></a></div>
+<ol>
+<li><a href="derivate-e-integrali/derivate.html" data-p="derivate-e-integrali/derivate.html"><span class="n" translate="no">3.1</span><span class="t">Derivate</span></a></li>
+<li><a href="derivate-e-integrali/integrali.html" data-p="derivate-e-integrali/integrali.html"><span class="n" translate="no">3.2</span><span class="t">Integrali</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="vettori-e-sistemi-di-riferimento"><div class="ch-row"><button class="tw" aria-label="Espandi Vettori e sistemi di riferimento" aria-expanded="false"></button><a href="vettori-e-sistemi-di-riferimento/index.html" data-p="vettori-e-sistemi-di-riferimento/index.html"><span class="n" translate="no">4</span><span class="t">Vettori e sistemi di riferimento</span></a></div>
+<ol>
+<li><a href="vettori-e-sistemi-di-riferimento/i-vettori.html" data-p="vettori-e-sistemi-di-riferimento/i-vettori.html"><span class="n" translate="no">4.1</span><span class="t">I vettori</span></a></li>
+<li><a href="vettori-e-sistemi-di-riferimento/coordinate-cartesiane.html" data-p="vettori-e-sistemi-di-riferimento/coordinate-cartesiane.html"><span class="n" translate="no">4.2</span><span class="t">Coordinate cartesiane</span></a></li>
+<li><a href="vettori-e-sistemi-di-riferimento/coordinate-polari.html" data-p="vettori-e-sistemi-di-riferimento/coordinate-polari.html"><span class="n" translate="no">4.3</span><span class="t">Coordinate polari</span></a></li>
+<li><a href="vettori-e-sistemi-di-riferimento/coordinate-intrinseche.html" data-p="vettori-e-sistemi-di-riferimento/coordinate-intrinseche.html"><span class="n" translate="no">4.4</span><span class="t">Coordinate intrinseche</span></a></li>
+<li><a href="vettori-e-sistemi-di-riferimento/derivata-di-un-vettore.html" data-p="vettori-e-sistemi-di-riferimento/derivata-di-un-vettore.html"><span class="n" translate="no">4.5</span><span class="t">Derivata di un vettore</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="cinematica"><div class="ch-row"><button class="tw" aria-label="Espandi Cinematica" aria-expanded="false"></button><a href="cinematica/index.html" data-p="cinematica/index.html"><span class="n" translate="no">5</span><span class="t">Cinematica</span></a></div>
+<ol>
+<li><a href="cinematica/le-prime-definizioni.html" data-p="cinematica/le-prime-definizioni.html"><span class="n" translate="no">5.1</span><span class="t">Le prime definizioni</span></a></li>
+<li><a href="cinematica/equazioni-del-moto.html" data-p="cinematica/equazioni-del-moto.html"><span class="n" translate="no">5.2</span><span class="t">Equazioni del moto</span></a></li>
+<li><a href="cinematica/equazioni-del-moto-in-coordinate-cartesiane.html" data-p="cinematica/equazioni-del-moto-in-coordinate-cartesiane.html"><span class="n" translate="no">5.3</span><span class="t">Equazioni del moto in coordinate cartesiane</span></a></li>
+<li><a href="cinematica/equazioni-del-moto-in-coordinate-polari.html" data-p="cinematica/equazioni-del-moto-in-coordinate-polari.html"><span class="n" translate="no">5.4</span><span class="t">Equazioni del moto in coordinate polari</span></a></li>
+<li><a href="cinematica/equazioni-del-moto-in-coordinate-intrinseche.html" data-p="cinematica/equazioni-del-moto-in-coordinate-intrinseche.html"><span class="n" translate="no">5.5</span><span class="t">Equazioni del moto in coordinate intrinseche</span></a></li>
+<li><a href="cinematica/moto-rettilineo.html" data-p="cinematica/moto-rettilineo.html"><span class="n" translate="no">5.6</span><span class="t">Moto rettilineo</span></a></li>
+<li><a href="cinematica/moto-parabolico.html" data-p="cinematica/moto-parabolico.html"><span class="n" translate="no">5.7</span><span class="t">Moto parabolico</span></a></li>
+<li><a href="cinematica/moto-angolare.html" data-p="cinematica/moto-angolare.html"><span class="n" translate="no">5.8</span><span class="t">Moto Angolare</span></a></li>
+<li><a href="cinematica/moto-circolare.html" data-p="cinematica/moto-circolare.html"><span class="n" translate="no">5.9</span><span class="t">Moto circolare</span></a></li>
+<li><a href="cinematica/approfondimento-caduta-di-un-grave-in-aria.html" data-p="cinematica/approfondimento-caduta-di-un-grave-in-aria.html"><span class="n" translate="no">5.10</span><span class="t">Approfondimento: caduta di un grave in aria</span></a></li>
+<li><a href="cinematica/approfondimento-moto-armonico.html" data-p="cinematica/approfondimento-moto-armonico.html"><span class="n" translate="no">5.11</span><span class="t">Approfondimento: moto armonico</span></a></li>
+<li><a href="cinematica/alcuni-esempi.html" data-p="cinematica/alcuni-esempi.html"><span class="n" translate="no">5.12</span><span class="t">Alcuni esempi</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="dinamica"><div class="ch-row"><button class="tw" aria-label="Espandi Dinamica" aria-expanded="false"></button><a href="dinamica/index.html" data-p="dinamica/index.html"><span class="n" translate="no">6</span><span class="t">Dinamica</span></a></div>
+<ol>
+<li><a href="dinamica/i-principi-di-newton.html" data-p="dinamica/i-principi-di-newton.html"><span class="n" translate="no">6.1</span><span class="t">I Principi di Newton</span></a></li>
+<li><a href="dinamica/le-forze.html" data-p="dinamica/le-forze.html"><span class="n" translate="no">6.2</span><span class="t">Le Forze</span></a></li>
+<li><a href="dinamica/quantita-di-moto.html" data-p="dinamica/quantita-di-moto.html"><span class="n" translate="no">6.3</span><span class="t">Quantità di Moto</span></a></li>
+<li><a href="dinamica/impulso.html" data-p="dinamica/impulso.html"><span class="n" translate="no">6.4</span><span class="t">Impulso</span></a></li>
+<li><a href="dinamica/teorema-dell-impulso.html" data-p="dinamica/teorema-dell-impulso.html"><span class="n" translate="no">6.5</span><span class="t">Teorema dell'impulso</span></a></li>
+<li><a href="dinamica/teorema-della-conservazione-della-quantita-di-moto.html" data-p="dinamica/teorema-della-conservazione-della-quantita-di-moto.html"><span class="n" translate="no">6.6</span><span class="t">Teorema della conservazione della quantità di moto</span></a></li>
+<li><a href="dinamica/pendolo-semplice.html" data-p="dinamica/pendolo-semplice.html"><span class="n" translate="no">6.7</span><span class="t">Pendolo Semplice</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="lavoro-e-energie"><div class="ch-row"><button class="tw" aria-label="Espandi Lavoro e Energie" aria-expanded="false"></button><a href="lavoro-e-energie/index.html" data-p="lavoro-e-energie/index.html"><span class="n" translate="no">7</span><span class="t">Lavoro e Energie</span></a></div>
+<ol>
+<li><a href="lavoro-e-energie/lavoro.html" data-p="lavoro-e-energie/lavoro.html"><span class="n" translate="no">7.1</span><span class="t">Lavoro</span></a></li>
+<li><a href="lavoro-e-energie/energia-cinetica.html" data-p="lavoro-e-energie/energia-cinetica.html"><span class="n" translate="no">7.2</span><span class="t">Energia Cinetica</span></a></li>
+<li><a href="lavoro-e-energie/teorema-dell-energia-lavoro.html" data-p="lavoro-e-energie/teorema-dell-energia-lavoro.html"><span class="n" translate="no">7.3</span><span class="t">Teorema dell'Energia-Lavoro</span></a></li>
+<li><a href="lavoro-e-energie/potenza.html" data-p="lavoro-e-energie/potenza.html"><span class="n" translate="no">7.4</span><span class="t">Potenza</span></a></li>
+<li><a href="lavoro-e-energie/lavoro-della-forza-peso.html" data-p="lavoro-e-energie/lavoro-della-forza-peso.html"><span class="n" translate="no">7.5</span><span class="t">Lavoro della Forza Peso</span></a></li>
+<li><a href="lavoro-e-energie/lavoro-delle-forze-elastiche.html" data-p="lavoro-e-energie/lavoro-delle-forze-elastiche.html"><span class="n" translate="no">7.6</span><span class="t">Lavoro delle Forze Elastiche</span></a></li>
+<li><a href="lavoro-e-energie/lavoro-della-forza-d-attrito-dinamico.html" data-p="lavoro-e-energie/lavoro-della-forza-d-attrito-dinamico.html"><span class="n" translate="no">7.7</span><span class="t">Lavoro della Forza d'Attrito dinamico</span></a></li>
+<li><a href="lavoro-e-energie/lavoro-delle-forze-ortogonali-allo-spostamento.html" data-p="lavoro-e-energie/lavoro-delle-forze-ortogonali-allo-spostamento.html"><span class="n" translate="no">7.8</span><span class="t">Lavoro delle forze ortogonali allo spostamento</span></a></li>
+<li><a href="lavoro-e-energie/forze-conservative.html" data-p="lavoro-e-energie/forze-conservative.html"><span class="n" translate="no">7.9</span><span class="t">Forze Conservative</span></a></li>
+<li><a href="lavoro-e-energie/energia-potenziale.html" data-p="lavoro-e-energie/energia-potenziale.html"><span class="n" translate="no">7.10</span><span class="t">Energia Potenziale</span></a></li>
+<li><a href="lavoro-e-energie/approfondimento-relazione-tra-de-e-df.html" data-p="lavoro-e-energie/approfondimento-relazione-tra-de-e-df.html"><span class="n" translate="no">7.11</span><span class="t">Approfondimento: Relazione tra <span class="math inline notranslate" translate="no"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span></span></span></span></span> e <span class="math inline notranslate" translate="no"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span></span></span></a></li>
+<li><a href="lavoro-e-energie/teorema-della-conservazione-dell-energia.html" data-p="lavoro-e-energie/teorema-della-conservazione-dell-energia.html"><span class="n" translate="no">7.12</span><span class="t">Teorema della conservazione dell'energia</span></a></li>
+<li><a href="lavoro-e-energie/approfondimento-funzioni-additive.html" data-p="lavoro-e-energie/approfondimento-funzioni-additive.html"><span class="n" translate="no">7.13</span><span class="t">Approfondimento: Funzioni Additive</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="moti-relativi"><div class="ch-row"><button class="tw" aria-label="Espandi Moti relativi" aria-expanded="false"></button><a href="moti-relativi/index.html" data-p="moti-relativi/index.html"><span class="n" translate="no">8</span><span class="t">Moti relativi</span></a></div>
+<ol>
+<li><a href="moti-relativi/definizioni-preliminari.html" data-p="moti-relativi/definizioni-preliminari.html"><span class="n" translate="no">8.1</span><span class="t">Definizioni preliminari</span></a></li>
+<li><a href="moti-relativi/notazione-e-convenzioni.html" data-p="moti-relativi/notazione-e-convenzioni.html"><span class="n" translate="no">8.2</span><span class="t">Notazione e Convenzioni</span></a></li>
+<li><a href="moti-relativi/trasformazioni-di-coordinate.html" data-p="moti-relativi/trasformazioni-di-coordinate.html"><span class="n" translate="no">8.3</span><span class="t">Trasformazioni di Coordinate</span></a></li>
+<li><a href="moti-relativi/approfondimento-la-derivata-di-un-versore-rotante.html" data-p="moti-relativi/approfondimento-la-derivata-di-un-versore-rotante.html"><span class="n" translate="no">8.4</span><span class="t">Approfondimento: la derivata di un versore rotante</span></a></li>
+<li><a href="moti-relativi/teorema-delle-velocita-relative.html" data-p="moti-relativi/teorema-delle-velocita-relative.html"><span class="n" translate="no">8.5</span><span class="t">Teorema delle velocità relative</span></a></li>
+<li><a href="moti-relativi/dimostrazione.html" data-p="moti-relativi/dimostrazione.html"><span class="n" translate="no">8.6</span><span class="t">Dimostrazione</span></a></li>
+<li><a href="moti-relativi/teorema-delle-accelerazioni-relative.html" data-p="moti-relativi/teorema-delle-accelerazioni-relative.html"><span class="n" translate="no">8.7</span><span class="t">Teorema delle accelerazioni relative</span></a></li>
+<li><a href="moti-relativi/esempi-avanzati.html" data-p="moti-relativi/esempi-avanzati.html"><span class="n" translate="no">8.8</span><span class="t">Esempi Avanzati</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="momenti"><div class="ch-row"><button class="tw" aria-label="Espandi Momenti" aria-expanded="false"></button><a href="momenti/index.html" data-p="momenti/index.html"><span class="n" translate="no">9</span><span class="t">Momenti</span></a></div>
+<ol>
+<li><a href="momenti/momento-angolare.html" data-p="momenti/momento-angolare.html"><span class="n" translate="no">9.1</span><span class="t">Momento angolare</span></a></li>
+<li><a href="momenti/momento-delle-forze.html" data-p="momenti/momento-delle-forze.html"><span class="n" translate="no">9.2</span><span class="t">Momento delle forze</span></a></li>
+<li><a href="momenti/teorema-del-momento-angolare-per-polo-fisso.html" data-p="momenti/teorema-del-momento-angolare-per-polo-fisso.html"><span class="n" translate="no">9.3</span><span class="t">Teorema del momento angolare per polo fisso</span></a></li>
+<li><a href="momenti/teorema-del-momento-angolare-per-polo-mobile.html" data-p="momenti/teorema-del-momento-angolare-per-polo-mobile.html"><span class="n" translate="no">9.4</span><span class="t">Teorema del momento angolare per polo mobile</span></a></li>
+<li><a href="momenti/momenti-in-coordinate-polari.html" data-p="momenti/momenti-in-coordinate-polari.html"><span class="n" translate="no">9.5</span><span class="t">Momenti in coordinate polari</span></a></li>
+<li><a href="momenti/teorema-del-momento-dell-impulso.html" data-soon="" data-p="momenti/teorema-del-momento-dell-impulso.html"><span class="n" translate="no">9.6</span><span class="t">Teorema del momento dell'impulso</span></a></li>
+<li><a href="momenti/lavori-e-energie-in-funzioni-dei-momenti.html" data-p="momenti/lavori-e-energie-in-funzioni-dei-momenti.html"><span class="n" translate="no">9.7</span><span class="t">Lavori e energie in funzioni dei momenti</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="dinamica-del-sistema-di-punti"><div class="ch-row"><button class="tw" aria-label="Espandi Dinamica del sistema di punti" aria-expanded="false"></button><a href="dinamica-del-sistema-di-punti/index.html" data-p="dinamica-del-sistema-di-punti/index.html"><span class="n" translate="no">10</span><span class="t">Dinamica del sistema di punti</span></a></div>
+<ol>
+<li><a href="dinamica-del-sistema-di-punti/definizioni-preliminari.html" data-p="dinamica-del-sistema-di-punti/definizioni-preliminari.html"><span class="n" translate="no">10.1</span><span class="t">Definizioni preliminari</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/proprieta-dei-sistemi-di-punti.html" data-p="dinamica-del-sistema-di-punti/proprieta-dei-sistemi-di-punti.html"><span class="n" translate="no">10.2</span><span class="t">Proprietà dei sistemi di punti</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/sistema-del-laboratorio.html" data-p="dinamica-del-sistema-di-punti/sistema-del-laboratorio.html"><span class="n" translate="no">10.3</span><span class="t">Sistema del laboratorio</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/i-teorema-di-konig.html" data-p="dinamica-del-sistema-di-punti/i-teorema-di-konig.html"><span class="n" translate="no">10.4</span><span class="t">I Teorema di König</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/osservazioni.html" data-p="dinamica-del-sistema-di-punti/osservazioni.html"><span class="n" translate="no">10.5</span><span class="t">Osservazioni</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/ii-teorema-di-konig.html" data-p="dinamica-del-sistema-di-punti/ii-teorema-di-konig.html"><span class="n" translate="no">10.6</span><span class="t">II Teorema di König</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/iii-teorema-di-konig.html" data-soon="" data-p="dinamica-del-sistema-di-punti/iii-teorema-di-konig.html"><span class="n" translate="no">10.7</span><span class="t">III Teorema di König</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/primo-teorema-cardinale-della-dinamica.html" data-p="dinamica-del-sistema-di-punti/primo-teorema-cardinale-della-dinamica.html"><span class="n" translate="no">10.8</span><span class="t">Primo Teorema Cardinale della Dinamica</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/osservazioni-2.html" data-p="dinamica-del-sistema-di-punti/osservazioni-2.html"><span class="n" translate="no">10.9</span><span class="t">Osservazioni</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/ii-equazione-cardinale.html" data-p="dinamica-del-sistema-di-punti/ii-equazione-cardinale.html"><span class="n" translate="no">10.10</span><span class="t">II equazione cardinale</span></a></li>
+<li><a href="dinamica-del-sistema-di-punti/lavoro-delle-forze-in-un-sistema-di-particelle.html" data-p="dinamica-del-sistema-di-punti/lavoro-delle-forze-in-un-sistema-di-particelle.html"><span class="n" translate="no">10.11</span><span class="t">Lavoro delle Forze in un Sistema di Particelle</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="urti"><div class="ch-row"><button class="tw" aria-label="Espandi Urti" aria-expanded="false"></button><a href="urti/index.html" data-p="urti/index.html"><span class="n" translate="no">11</span><span class="t">Urti</span></a></div>
+<ol>
+<li><a href="urti/urto-elastico.html" data-p="urti/urto-elastico.html"><span class="n" translate="no">11.1</span><span class="t">Urto elastico</span></a></li>
+<li><a href="urti/urto-anelastico.html" data-p="urti/urto-anelastico.html"><span class="n" translate="no">11.2</span><span class="t">Urto anelastico</span></a></li>
+<li><a href="urti/urto-vincolato.html" data-p="urti/urto-vincolato.html"><span class="n" translate="no">11.3</span><span class="t">Urto vincolato</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="corpo-rigido"><div class="ch-row"><button class="tw" aria-label="Espandi Corpo rigido" aria-expanded="false"></button><a href="corpo-rigido/index.html" data-p="corpo-rigido/index.html"><span class="n" translate="no">12</span><span class="t">Corpo rigido</span></a></div>
+<ol>
+<li><a href="corpo-rigido/massa-di-un-corpo-rigido.html" data-p="corpo-rigido/massa-di-un-corpo-rigido.html"><span class="n" translate="no">12.1</span><span class="t">Massa di un corpo rigido</span></a></li>
+<li><a href="corpo-rigido/proprieta-di-un-corpo-rigido.html" data-p="corpo-rigido/proprieta-di-un-corpo-rigido.html"><span class="n" translate="no">12.2</span><span class="t">Proprietà di un corpo rigido</span></a></li>
+<li><a href="corpo-rigido/inerzia.html" data-p="corpo-rigido/inerzia.html"><span class="n" translate="no">12.3</span><span class="t">Inerzia</span></a></li>
+<li><a href="corpo-rigido/sistema-del-laboratorio-per-un-corpo-rigido.html" data-p="corpo-rigido/sistema-del-laboratorio-per-un-corpo-rigido.html"><span class="n" translate="no">12.4</span><span class="t">Sistema del laboratorio per un corpo rigido</span></a></li>
+<li><a href="corpo-rigido/moto-di-traslazione.html" data-p="corpo-rigido/moto-di-traslazione.html"><span class="n" translate="no">12.5</span><span class="t">Moto di traslazione</span></a></li>
+<li><a href="corpo-rigido/moto-di-rotazione.html" data-p="corpo-rigido/moto-di-rotazione.html"><span class="n" translate="no">12.6</span><span class="t">Moto di rotazione</span></a></li>
+<li><a href="corpo-rigido/moto-di-rototraslazione.html" data-p="corpo-rigido/moto-di-rototraslazione.html"><span class="n" translate="no">12.7</span><span class="t">Moto di rototraslazione</span></a></li>
+<li><a href="corpo-rigido/momento-angolare-in-pura-rotazione.html" data-p="corpo-rigido/momento-angolare-in-pura-rotazione.html"><span class="n" translate="no">12.8</span><span class="t">Momento angolare in pura rotazione</span></a></li>
+<li><a href="corpo-rigido/i-teoremi-di-konig-applicati-al-corpo-rigido.html" data-p="corpo-rigido/i-teoremi-di-konig-applicati-al-corpo-rigido.html"><span class="n" translate="no">12.9</span><span class="t">I Teoremi di König applicati al corpo rigido</span></a></li>
+<li><a href="corpo-rigido/teorema-di-huygens-steiner.html" data-p="corpo-rigido/teorema-di-huygens-steiner.html"><span class="n" translate="no">12.10</span><span class="t">Teorema di Huygens-Steiner</span></a></li>
+<li><a href="corpo-rigido/moto-di-un-pendolo-composto.html" data-p="corpo-rigido/moto-di-un-pendolo-composto.html"><span class="n" translate="no">12.11</span><span class="t">Moto di un pendolo composto</span></a></li>
+<li><a href="corpo-rigido/moto-di-puro-rotolamento.html" data-soon="" data-p="corpo-rigido/moto-di-puro-rotolamento.html"><span class="n" translate="no">12.12</span><span class="t">Moto di puro rotolamento</span></a></li>
+<li><a href="corpo-rigido/approfondimento-passaggio-di-coordinate-a-livello-differenziale.html" data-p="corpo-rigido/approfondimento-passaggio-di-coordinate-a-livello-differenziale.html"><span class="n" translate="no">12.13</span><span class="t">Approfondimento: Passaggio di coordinate a livello differenziale</span></a></li>
+<li><a href="corpo-rigido/approfondimento-calcolo-dei-principali-momenti-di-inerzia.html" data-p="corpo-rigido/approfondimento-calcolo-dei-principali-momenti-di-inerzia.html"><span class="n" translate="no">12.14</span><span class="t">Approfondimento: Calcolo dei principali momenti di inerzia</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="termodinamica"><div class="ch-row"><button class="tw" aria-label="Espandi Termodinamica" aria-expanded="false"></button><a href="termodinamica/index.html" data-p="termodinamica/index.html"><span class="n" translate="no">13</span><span class="t">Termodinamica</span></a></div>
+<ol>
+<li><a href="termodinamica/introduzione.html" data-p="termodinamica/introduzione.html"><span class="n" translate="no">13.1</span><span class="t">Introduzione</span></a></li>
+<li><a href="termodinamica/sistema-termodinamico.html" data-p="termodinamica/sistema-termodinamico.html"><span class="n" translate="no">13.2</span><span class="t">Sistema termodinamico</span></a></li>
+<li><a href="termodinamica/pareti.html" data-p="termodinamica/pareti.html"><span class="n" translate="no">13.3</span><span class="t">Pareti</span></a></li>
+<li><a href="termodinamica/ambiente.html" data-p="termodinamica/ambiente.html"><span class="n" translate="no">13.4</span><span class="t">Ambiente</span></a></li>
+<li><a href="termodinamica/coordinate-macroscopiche.html" data-p="termodinamica/coordinate-macroscopiche.html"><span class="n" translate="no">13.5</span><span class="t">Coordinate macroscopiche</span></a></li>
+<li><a href="termodinamica/equilibrio-termodinamico.html" data-p="termodinamica/equilibrio-termodinamico.html"><span class="n" translate="no">13.6</span><span class="t">Equilibrio termodinamico</span></a></li>
+<li><a href="termodinamica/legge-dei-gas-perfetti.html" data-p="termodinamica/legge-dei-gas-perfetti.html"><span class="n" translate="no">13.7</span><span class="t">Legge dei gas perfetti</span></a></li>
+<li><a href="termodinamica/diagramma-di-clapeyron.html" data-p="termodinamica/diagramma-di-clapeyron.html"><span class="n" translate="no">13.8</span><span class="t">Diagramma di Clapeyron</span></a></li>
+<li><a href="termodinamica/scambi-di-lavoro-e-calore.html" data-p="termodinamica/scambi-di-lavoro-e-calore.html"><span class="n" translate="no">13.9</span><span class="t">Scambi di Lavoro e Calore</span></a></li>
+<li><a href="termodinamica/lavoro.html" data-p="termodinamica/lavoro.html"><span class="n" translate="no">13.10</span><span class="t">Lavoro</span></a></li>
+<li><a href="termodinamica/calore.html" data-p="termodinamica/calore.html"><span class="n" translate="no">13.11</span><span class="t">Calore</span></a></li>
+<li><a href="termodinamica/trasformazioni-termodinamiche.html" data-p="termodinamica/trasformazioni-termodinamiche.html"><span class="n" translate="no">13.12</span><span class="t">Trasformazioni termodinamiche</span></a></li>
+<li><a href="termodinamica/trasformazioni-irreversibili.html" data-p="termodinamica/trasformazioni-irreversibili.html"><span class="n" translate="no">13.13</span><span class="t">Trasformazioni irreversibili</span></a></li>
+<li><a href="termodinamica/trasformazioni-reversibili.html" data-p="termodinamica/trasformazioni-reversibili.html"><span class="n" translate="no">13.14</span><span class="t">Trasformazioni reversibili</span></a></li>
+<li><a href="termodinamica/alcune-trasformazioni-termodinamiche.html" data-p="termodinamica/alcune-trasformazioni-termodinamiche.html"><span class="n" translate="no">13.15</span><span class="t">Alcune trasformazioni termodinamiche</span></a></li>
+<li><a href="termodinamica/lavoro-di-alcune-trasformazioni.html" data-p="termodinamica/lavoro-di-alcune-trasformazioni.html"><span class="n" translate="no">13.16</span><span class="t">Lavoro di alcune trasformazioni</span></a></li>
+<li><a href="termodinamica/approfondimento-calore-specifico-dei-gas.html" data-p="termodinamica/approfondimento-calore-specifico-dei-gas.html"><span class="n" translate="no">13.17</span><span class="t">Approfondimento: Calore specifico dei gas</span></a></li>
+<li><a href="termodinamica/approfondimento-teorema-di-equipartizione-dell-energia.html" data-p="termodinamica/approfondimento-teorema-di-equipartizione-dell-energia.html"><span class="n" translate="no">13.18</span><span class="t">Approfondimento: Teorema di equipartizione dell'energia</span></a></li>
+<li><a href="termodinamica/equilibrio-termico-tra-due-sostanze.html" data-p="termodinamica/equilibrio-termico-tra-due-sostanze.html"><span class="n" translate="no">13.19</span><span class="t">Equilibrio termico tra due sostanze</span></a></li>
+<li><a href="termodinamica/trasmissione-del-calore.html" data-p="termodinamica/trasmissione-del-calore.html"><span class="n" translate="no">13.20</span><span class="t">Trasmissione del calore</span></a></li>
+<li><a href="termodinamica/i-principio-della-termodinamica.html" data-p="termodinamica/i-principio-della-termodinamica.html"><span class="n" translate="no">13.21</span><span class="t">I Principio della Termodinamica</span></a></li>
+<li><a href="termodinamica/esperimento-di-joule-relazione-tra-calorie-e-joule.html" data-p="termodinamica/esperimento-di-joule-relazione-tra-calorie-e-joule.html"><span class="n" translate="no">13.22</span><span class="t">Esperimento di Joule: Relazione tra calorie e joule</span></a></li>
+<li><a href="termodinamica/relazione-di-mayer.html" data-p="termodinamica/relazione-di-mayer.html"><span class="n" translate="no">13.23</span><span class="t">Relazione di Mayer</span></a></li>
+<li><a href="termodinamica/trasformazioni-adiabatiche-reversibili.html" data-p="termodinamica/trasformazioni-adiabatiche-reversibili.html"><span class="n" translate="no">13.24</span><span class="t">Trasformazioni adiabatiche reversibili</span></a></li>
+</ol>
+</li>
+<li class="ch" data-ch="flusso"><div class="ch-row"><button class="tw" aria-label="Espandi Flusso" aria-expanded="false"></button><a href="flusso/index.html" data-p="flusso/index.html"><span class="n" translate="no">14</span><span class="t">Flusso</span><span class="wip">in lavorazione</span></a></div>
+<ol>
+<li><a href="flusso/definizione-matematica.html" data-p="flusso/definizione-matematica.html"><span class="n" translate="no">14.1</span><span class="t">Definizione Matematica</span></a></li>
+<li><a href="flusso/interpretazione-fisica.html" data-p="flusso/interpretazione-fisica.html"><span class="n" translate="no">14.2</span><span class="t">Interpretazione Fisica</span></a></li>
+<li><a href="flusso/il-teorema-di-gauss-e-l-angolo-solido.html" data-p="flusso/il-teorema-di-gauss-e-l-angolo-solido.html"><span class="n" translate="no">14.3</span><span class="t">Il Teorema di Gauss e l'Angolo Solido</span></a></li>
+<li><a href="flusso/il-flusso-in-fluidodinamica.html" data-p="flusso/il-flusso-in-fluidodinamica.html"><span class="n" translate="no">14.4</span><span class="t">Il Flusso in Fluidodinamica</span></a></li>
+<li><a href="flusso/il-flusso-in-gravitazione.html" data-p="flusso/il-flusso-in-gravitazione.html"><span class="n" translate="no">14.5</span><span class="t">Il Flusso in Gravitazione</span></a></li>
+<li><a href="flusso/osservazioni.html" data-p="flusso/osservazioni.html"><span class="n" translate="no">14.6</span><span class="t">Osservazioni</span></a></li>
+</ol>
+</li>
+</ol></nav>
+<script src="assets/app.js"></script>
+<script src="assets/lab.js"></script>
+</body>
+</html>

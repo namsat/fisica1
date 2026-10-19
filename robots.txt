@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://namsat.github.io/fisica1/sitemap.xml
